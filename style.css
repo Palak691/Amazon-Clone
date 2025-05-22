@@ -51,7 +51,6 @@
 .nav-search{
     display: flex;
     justify-content: space-evenly;
-    background-color: red;
    width: 620px;
    height: 40px;
    border-radius: 3px;
@@ -117,7 +116,7 @@ span{
     width: 70%;
     font-size: 0.8rem;
 }
-panel-deals{
+.panel-deals{
     font-size: 0.9rem;
     font-weight: 700;
 }
@@ -148,10 +147,12 @@ panel-deals{
 /* shop section */
 .shoping-section{
     display: flex;
-    justify-content: space-evenly;
-    background-color: #e2e7e6;
     flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: #e3e6e6;
+    padding: 20px 0;
 }
+
 .box{
     border: 2px solid black;
     height: 400px;
@@ -246,23 +247,43 @@ ul p{
 
 }
 
-/*  media*/
-@media (max-width: 768px) {
+/* Medium Screens (Tablets) */
+@media (max-width: 1024px) {
   .nav-search {
-    flex-direction: column;
-  }
-
-  .hero-section {
-    height: 200px;
-  }
-
-  .hero-msg {
-    font-size: 12px;
+    width: 80%;
   }
 
   .panel-ops {
+    font-size: 0.7rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .shoping-section {
+    justify-content: center;
+  }
+
+  .box {
+    width: 45%;
+    margin: 10px;
+  }
+
+  .foot-panel2 {
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
+    height: auto;
+    padding: 20px 0;
+  }
+}
+
+/* Small Screens (Mobiles) */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+    height: auto;
+    padding: 10px 0;
   }
 
   .nav-logo,
@@ -273,8 +294,46 @@ ul p{
     text-align: center;
     margin-bottom: 10px;
   }
+
+  .nav-search {
+    flex-direction: column;
+    width: 100%;
+    align-items: stretch;
+    margin: 10px auto;
+  }
+
+  .search-select,
+  .search-input,
+  .search-icon {
+    width: 100%;
+    margin: 4px 0;
+  }
+
+  .hero-section {
+    height: 250px;
+    background-position: center;
+  }
+
+  .hero-msg {
+    width: 90%;
+    font-size: 0.75rem;
+    padding: 10px;
+  }
+
+  .box {
+    width: 80%;
+  }
+
+  .foot-panel2 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    padding: 20px;
+  }
 }
 
+/* Extra Small Screens (Very small mobiles) */
 @media (max-width: 480px) {
   .nav-search {
     flex-direction: column;
@@ -293,8 +352,12 @@ ul p{
     padding: 8px;
   }
 
-  .foot-panel2 {
-    grid-template-columns: 1fr;
-    text-align: center;
+  .box {
+    width: 100%;
+  }
+
+  .foot-panel4 {
+    font-size: 0.6rem;
+    padding: 10px;
   }
 }
